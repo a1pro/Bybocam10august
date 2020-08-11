@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_layout_left"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Today"
+            android:visibility="visible"
+            android:textSize="17sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:id="@+id/messageDay"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/leftRelative"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/messageDay"
+        android:visibility="visible"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:98 pm"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="15sp"
+            android:textColor="@color/normal_filter2"
+            android:id="@+id/lefttimeOfMessage"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/lefttimeOfMessage"
+            android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/leftarrowImage"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/buble"/>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:visibility="visible"
+                android:layout_height="200dp"
+                android:background="#dedede"
+                android:id="@+id/leftmessageImage"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_toRightOf="@+id/leftarrowImage"
+        android:textSize="18sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/leftMessage"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/bg_msg_from"
+        android:text="Hello sunny"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rigthRelative"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/messageDay"
+        android:visibility="visible"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:98 pm"
+            android:layout_marginBottom="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:textSize="15sp"
+            android:textColor="@color/normal_filter2"
+            android:id="@+id/rigthtimeOfMessage"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/rigthtimeOfMessage"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:rotation="180"
+            android:id="@+id/rigtharrowImage"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/buble"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_toLeftOf="@+id/rigtharrowImage"
+            android:textSize="18sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:id="@+id/rigthMessage"
+            android:paddingBottom="5dp"
+            android:background="@drawable/bg_msg_from2"
+            android:text="Hello sunny"/>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:visibility="visible"
+                android:layout_height="200dp"
+                android:background="#dedede"
+                android:layout_alignParentRight="true"
+                android:id="@+id/rightmessageImage"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

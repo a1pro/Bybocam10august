@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "472329218516",
+    "firebase_url": "https://bybocam.firebaseio.com",
+    "project_id": "bybocam",
+    "storage_bucket": "bybocam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472329218516:android:150aa8fd03e153a6c64e41",
+        "android_client_info": {
+          "package_name": "com.example.bybocam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472329218516-c2gm79ono8nr7mme3n4s33pk5p5j3neg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bybocam",
+            "certificate_hash": "ee48790b56655b9f247424b3c9439b39ad5d7bbd"
+          }
+        },
+        {
+          "client_id": "472329218516-atp5jktoqtlaohavg71a1hno4c93bm9l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7ALACPB8A4Kqn5Hor44eM_SBkcAHNw80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472329218516-atp5jktoqtlaohavg71a1hno4c93bm9l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

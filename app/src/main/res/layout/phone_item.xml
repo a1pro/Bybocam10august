@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_round"
+    android:layout_height="280dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:text="Enter Verfication code" />
+
+    <EditText
+        android:id="@+id/edt_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/edit_profile_back"
+        android:gravity="center"
+        android:padding="15dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Enter otp"
+        android:inputType="textMultiLine|text"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:background="@drawable/yellow_btn_back"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:layout_margin="10dp"
+            android:background="@drawable/yellow_btn_back"
+            android:layout_alignParentRight="true"/>
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

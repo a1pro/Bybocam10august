@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.bybocam.Fragments.ThreeFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_margin="5dp">
+
+
+        <com.example.bybocam.ProgressBar.SegmentedProgressBar
+            android:id="@+id/video_progress"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_centerVertical="true"
+            android:background="@color/fifty_transparent_black"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/timer_txt"
+            tools:ignore="UnknownId" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relative"
+        >
+
+        <!--        <com.example.bybocam.Utils.AutoFitTextureView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_alignParentTop="true"-->
+        <!--            android:layout_alignParentStart="true"-->
+        <!--            android:id="@+id/textureview3"-->
+        <!--            />-->
+        <com.wonderkiln.camerakit.CameraView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/camera"
+            android:adjustViewBounds="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            app:ckFacing="back"
+            app:ckVideoQuality="max480p"
+            app:ckLockVideoAspectRatio="true" />
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            style="@style/NewDialog"
+            android:id="@+id/progress"
+            android:background="@drawable/custom_progress"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/camera_options">
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/rotate"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/rotate_camera"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="30dp"/>
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/ic_flash_off_black_24dp"
+                android:id="@+id/flash_camera"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="30dp"
+                />
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/relative">
+        <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:id="@+id/choronometer21"
+            android:textColor="#ff0000"
+            android:visibility="gone"
+            android:layout_above="@+id/ImageCaptureBtn21"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/click_button"
+            android:id="@+id/ImageCaptureBtn21"
+            android:layout_centerInParent="true"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/click_button"
+            android:id="@+id/record_image"
+            android:layout_centerInParent="true" />
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashOneFragmnet">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.bybocam.Fragments.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash"
+        >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_signupFragment"
+            app:destination="@id/signupFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.bybocam.Fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPassword1"
+            app:destination="@id/forgotPassword1" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.example.bybocam.Fragments.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPassword1"
+        android:name="com.example.bybocam.Fragments.ForgotPassword1"
+        android:label="fragment_forgot_password1"
+        tools:layout="@layout/fragment_forgot_password1" >
+        <action
+            android:id="@+id/action_forgotPassword1_to_forgotPassword2"
+            app:destination="@id/forgotPassword2" />
+        <action
+            android:id="@+id/action_forgotPassword1_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPassword2"
+        android:name="com.example.bybocam.Fragments.ForgotPassword2"
+        android:label="fragment_forgot_password2"
+        tools:layout="@layout/fragment_forgot_password2" >
+        <action
+            android:id="@+id/action_forgotPassword2_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_forgotPassword2_to_forgotPassword1"
+            app:destination="@id/forgotPassword1" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashOneFragmnet"
+        android:name="com.example.bybocam.Fragments.SplashOneFragmnet"
+        android:label="fragment_splash_one_fragmnet"
+        tools:layout="@layout/fragment_splash_one_fragmnet" >
+        <action
+            android:id="@+id/action_splashOneFragmnet_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
+</navigation>

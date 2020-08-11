@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.bybocam">
+
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <application
+        android:name=".Myapplication.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activities.VideoCameraActivity"/>
+        <activity android:name=".Activities.PhoneVerificationActivity" />
+        <activity android:name=".Activities.LikedPostsActivity" />
+        <activity android:name=".Activities.BlockedUsersActivity" />
+        <activity android:name=".Activities.InfluencePersonActivity" />
+        <activity android:name=".Activities.ShareVideoActivity" />
+        <activity android:name=".Activities.RandomvideoplayActivity" />
+        <activity android:name=".Activities.InfluenceFilterActivity" />
+        <activity android:name=".Activities.InfluenceProfileActivity" />
+        <activity android:name=".Activities.ShoutLoudVideos" />
+        <activity android:name=".Activities.AddFlueneceActivity" />
+        <activity android:name=".Activities.ShoutoutLoadActivity" />
+        <activity android:name=".Activities.ChatWithSingleUser" />
+        <activity android:name=".Activities.ViewAllFollowers" />
+        <activity android:name=".Activities.OtherUserProfile" />
+        <activity android:name=".Activities.FullImageView" />
+        <activity
+            android:name=".Activities.VideoPlay"
+            android:screenOrientation="fullSensor" />
+        <activity android:name=".Activities.ViewProfile" />
+        <activity android:name=".Activities.AllComments" />
+        <activity android:name=".Activities.FIlerImage" />
+        <activity android:name=".Activities.NotificationScreen" />
+        <activity android:name=".Activities.ReportProblem" />
+        <activity
+            android:name=".Activities.SearchUser"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".Activities.Setting" />
+        <activity android:name=".Activities.MessageScreen" />
+        <activity android:name=".Activities.Home" />
+        <activity android:name=".Activities.Gallary" />
+        <activity android:name=".Activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Editor.EditImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter
+                android:label="@string/app_intent_name"
+                android:scheme="file"
+                tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <provider
+            android:name=".Utils.GenericFileProvider"
+            android:authorities="${applicationId}.silicompressor.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver android:name=".Utils.Myreciever" />
+
+        <service android:name=".FCM.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="fullSensor" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

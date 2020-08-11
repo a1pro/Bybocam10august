@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="3dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/splash_btn_back"
+        >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_favorite_black_24dp"
+            android:id="@+id/favorateImage"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="-20dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image_recommendation"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:civ_border_width="0dp"
+            android:layout_gravity="center"
+            app:civ_border_color="#FF000000"
+            android:background="@mipmap/defaultimage"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="username"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:id="@+id/username"
+            />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="No video found"
+                android:id="@+id/novideofound"
+                android:visibility="invisible"
+                android:textColor="@android:color/black"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="1dp">
+
+            <ImageView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                android:background="@color/gray"
+                 android:id="@+id/imageUserRecommendations1"/>
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@mipmap/yellow_play"
+                    android:id="@+id/playVideoIconRecommendation1"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="1dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray"
+                    android:id="@+id/imageUserRecommendations2"/>
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@mipmap/yellow_play"
+                    android:id="@+id/playVideoIconRecommendation2"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="1dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray"
+                    android:id="@+id/imageUserRecommendations3"/>
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@mipmap/yellow_play"
+                    android:id="@+id/playVideoIconRecommendation3"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

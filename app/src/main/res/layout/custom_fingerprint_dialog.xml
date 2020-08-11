@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:src="@drawable/ic_fingerprint_black_24dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:id="@+id/dialog_title"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Touch ID for Bybocam"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="15dp"
+        android:id="@+id/dialog_message"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Touch ID is locked now, because of too many failed attempts. Enter passcode to unlock Touch ID"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/next_color"
+        android:background="@color/white"
+        android:id="@+id/cancle_btn"
+        />
+</LinearLayout>

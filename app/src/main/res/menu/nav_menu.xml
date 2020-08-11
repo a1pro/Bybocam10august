@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/naviagtion_home"
+        android:icon="@mipmap/message"
+        android:title="@string/message" />
+
+
+    <item
+        android:id="@+id/naviagtion_uplaod"
+        android:icon="@mipmap/iconsvideo"
+        android:title="@string/recommendation" />
+
+    <item
+        android:id="@+id/naviagtion_cart"
+        android:icon="@mipmap/profile"
+        android:title="@string/profile" />
+
+
+</menu>

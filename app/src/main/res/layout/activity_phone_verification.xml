@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.PhoneVerificationActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/recommendationToolbarLayout"
+                android:visibility="visible">
+                <ImageView
+                    android:id="@+id/imageBackViewProfile"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Add Phone Number"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:weightSum="2">
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            app:hideNameCode="true"
+            android:layout_marginTop="5dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="phone number"
+            android:layout_marginLeft="-10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:textCursorDrawable="@drawable/login_signup_edit_text_back"
+            android:textColor="@android:color/black"
+            android:inputType="phone"
+            android:id="@+id/edit_profile_user_phone"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/bt_send"
+        android:layout_width="300dp"
+        android:layout_marginTop="50dp"
+        android:text="send Verification code"
+        android:textAllCaps="false"
+        android:background="@drawable/yellow_btn_back"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

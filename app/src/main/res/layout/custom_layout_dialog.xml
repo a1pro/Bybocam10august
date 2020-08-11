@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_conversation"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:id="@+id/dialog_title"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_c"
+        android:textSize="17sp"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_margin="10dp"
+        android:id="@+id/dialog_message"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/discard"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:id="@+id/discard_btn"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cancle"
+        android:background="@color/white"
+        android:id="@+id/cancle_btn"
+        />
+</LinearLayout>

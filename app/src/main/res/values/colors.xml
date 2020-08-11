@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#E2E2E2</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="yellow">#FEFF39</color>
+    <color name="skyblue">#1BB9C0</color>
+    <color name="loginBackground">#41CCB9</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#DF949191</color>
+    <color name="selected_filter">#221f20</color>
+    <color name="normal_filter">#8a8889</color>
+    <color name="normal_filter2">#525151</color>
+    <color name="next_color">#0029FF</color>
+    <color name="color_start">#D500FC</color>
+    <color name="color_end">#00FF83</color>
+    <color name="messageleftColor">#006666</color>
+    <color name="trans">#0000ffff</color>
+    <color name="fifty_transparent_black">#802F2F2F</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="message_back">#FBFE03</color>
+
+
+
+
+
+    <color name="blue_color_picker">#0066FF</color>
+    <color name="brown_color_picker">#AF593E</color>
+    <color name="green_color_picker">#01A368</color>
+    <color name="orange_color_picker">#FF861F</color>
+    <color name="red_color_picker">#ED0A3F</color>
+    <color name="red_orange_color_picker">#FF3F34</color>
+    <color name="sky_blue_color_picker">#76D7EA</color>
+    <color name="violet_color_picker">#8359A3</color>
+    <color name="yellow_color_picker">#FBE870</color>
+    <color name="yellow_green_color_picker">#C5E17A</color>
+    <color name="tool_bg">#151414</color>
+    <color name="semi_black_transparent">#99000000</color>
+
+
+
+</resources>

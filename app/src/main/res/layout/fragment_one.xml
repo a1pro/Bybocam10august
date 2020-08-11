@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.bybocam.Fragments.OneFragment">
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/mAppBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="280dp">
+
+        <com.jsibbold.zoomage.ZoomageView
+            android:id="@+id/mPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:zoomage_restrictBounds="false"
+            app:zoomage_animateOnReset="true"
+            app:zoomage_autoResetMode="UNDER"
+            app:zoomage_autoCenter="true"
+            app:zoomage_zoomable="true"
+            app:zoomage_translatable="true"
+            app:zoomage_minScale="0.6"
+            app:zoomage_maxScale="8"
+            android:elevation="8dp"
+            app:layout_anchor="@+id/mAppBarContainer"
+            app:layout_anchorGravity="center"
+            app:layout_scrollFlags="scroll|enterAlways"
+            />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/thumbnailRecylerView"
+        android:clipToPadding="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="7dp"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

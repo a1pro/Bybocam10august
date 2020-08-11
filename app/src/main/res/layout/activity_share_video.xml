@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ShareVideoActivity">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:text="Share"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                android:id="@+id/tv_share"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/recommendationToolbarLayout"
+                android:visibility="visible">
+                <ImageView
+                    android:id="@+id/imageBackReport"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Share Video"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/yellow_backg">
+
+                <ImageView
+                    android:id="@+id/img_thumb"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+
+
+      <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="-5dp"
+          android:background="@drawable/yellow_backg">
+
+
+            <EditText
+                android:id="@+id/et_desc"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:paddingTop="10dp"
+                android:gravity="top"
+                android:backgroundTint="@color/yellow_color_picker"
+                android:paddingLeft="15dp"
+                android:hint="Write a caption" />
+      </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+
+            <Button
+                android:id="@+id/bt_tagfriend"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textAllCaps="false"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"
+                android:layout_marginTop="3dp"
+                android:text="Tag Friends"/>
+            <ProgressBar
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                style="@style/NewDialog"
+                android:id="@+id/progress"
+                android:background="@drawable/custom_progress"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_centerInParent="true"/>
+
+        </LinearLayout>
+
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listview"/>
+
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SearchUser"
+    android:id="@+id/refresh">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:backgroundTint="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white">
+
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@mipmap/video"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/shoutvideo"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/recommendationToolbarLayout"
+                    android:visibility="visible">
+                    <ImageView
+                        android:id="@+id/imageBackSearch"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/search"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/black"
+        android:layout_below="@+id/appbarSearch"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_margin="20dp"
+        android:id="@+id/linear3"
+        android:orientation="horizontal"
+        android:layout_below="@+id/appbarSearch"
+        android:weightSum="6"
+        android:background="@mipmap/text_view_search_backgorund">
+
+        <EditText
+            android:layout_width="0dp"
+            android:paddingStart="15dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:hint="@string/search_by_user_name"
+            android:layout_marginStart="10dp"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:layout_weight="5"
+            android:backgroundTint="@color/white"
+            android:id="@+id/editTextSearchUser"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_search_black_24dp"
+            android:id="@+id/imageSerachuser"/>
+
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        style="@style/NewDialog"
+        android:id="@+id/progressSerachUser"
+        android:layout_centerInParent="true"
+        android:background="@drawable/custom_progress"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear3"
+        android:layout_marginTop="10dp"
+        android:layout_margin="5dp"
+        android:id="@+id/recyclerSearch"/>
+
+    </RelativeLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

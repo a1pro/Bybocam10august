@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ReportProblem">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:backgroundTint="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/recommendationToolbarLayout"
+                    android:visibility="visible">
+                    <ImageView
+                        android:id="@+id/imageBackReport"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/report_a_problem"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/black"
+        android:layout_below="@+id/appbarSearch"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_report"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_margin="20dp"
+        android:id="@+id/linear4"
+        android:layout_below="@+id/appbarSearch">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:paddingStart="15dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:hint="@string/enter_a_subject"
+            android:layout_marginStart="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:id="@+id/editTextMessage"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:layout_below="@+id/linear4"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textdescription"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear5"
+        android:layout_below="@+id/textdescription">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/back_report"
+        android:hint="@string/description"
+        android:layout_marginTop="5dp"
+        android:paddingStart="8dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="70dp"
+        android:id="@+id/editDescription"
+        />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear5"
+        android:layout_marginTop="90dp"
+        android:layout_centerHorizontal="true">
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:text="@string/send"
+        android:textAllCaps="false"
+        android:id="@+id/sendReportBtn"
+        android:background="@mipmap/sign_up_button"
+        android:layout_marginBottom="10dp"
+        />
+    </RelativeLayout>
+
+
+</RelativeLayout>

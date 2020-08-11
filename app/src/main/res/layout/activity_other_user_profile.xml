@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.OtherUserProfile">
+
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+                    android:id="@+id/settingProfile"
+                    android:layout_centerVertical="true"
+                    android:visibility="visible"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:visibility="visible"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/img_dot"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/dots"/>
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/black"
+        android:layout_below="@+id/appbar"/>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/refreshOther">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/nestedScrollview">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:orientation="vertical"
+                        android:layout_marginStart="25dp">
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/user_name"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:id="@+id/NameProfile"
+                            android:layout_marginTop="15dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/email"
+                            android:layout_marginTop="10dp"
+                            android:textSize="15sp"
+                            android:textColor="@color/black"
+                            android:id="@+id/userEmailProfile"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+
+                            >
+
+                            <ImageView
+                                android:layout_width="17dp"
+                                android:layout_height="17dp"
+                                android:src="@mipmap/grprofile"
+                                android:layout_marginBottom="5dp"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/_22758"
+                                android:textColor="@color/black"
+                                android:gravity="center"
+                                android:layout_marginLeft="15dp"
+                                android:id="@+id/noOfFollowing"
+                                android:layout_marginBottom="5dp"/>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/followers"
+                                android:textColor="@color/black"
+                                android:gravity="center"
+                                android:id="@+id/textFollowers"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginBottom="5dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/_22758"
+                                android:textColor="@color/black"
+                                android:gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:id="@+id/noOfFollowersOther"
+                                android:layout_marginBottom="5dp"/>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:orientation="vertical"
+                        >
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profile_image"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@mipmap/defaultimage"
+                            app:civ_border_width="0dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            app:civ_border_color="#FF000000"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="15dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/black"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/no_videos_found"
+                        android:id="@+id/no_video_found_other"
+                        android:visibility="gone"/>
+<!--                    <androidx.recyclerview.widget.RecyclerView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:id="@+id/profile_recyler"-->
+<!--                        android:layout_margin="5dp"/>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                        android:id="@+id/exoplayer1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:visibility="gone"
+                        android:background="@android:color/black"
+                        app:surface_type="texture_view"
+                        android:layout_height="match_parent"/>
+
+                    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                        android:id="@+id/exoplayer2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:background="@android:color/black"
+                        android:visibility="gone"
+                        app:surface_type="texture_view"
+                        android:layout_height="match_parent"/>
+
+                    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+                        android:id="@+id/exoplayer3"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:layout_margin="5dp"
+                        android:background="@android:color/black"
+                        app:surface_type="texture_view"
+                        android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/progress2"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal"
+                        android:id="@+id/gridlistlinear1"
+                        android:visibility="visible"
+                        >
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@mipmap/list_with_yellow"
+                            android:layout_margin="5dp"
+                            android:id="@+id/listViewRecycler"/>
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@mipmap/gray_with_grid"
+                            android:layout_margin="5dp"
+                            android:id="@+id/GridViewRecycler" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal"
+                        android:id="@+id/gridlistlinear2"
+                        android:visibility="gone"
+                        >
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@mipmap/grid"
+                            android:layout_margin="5dp"
+                            android:id="@+id/listViewRecycler2"/>
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@mipmap/list"
+                            android:layout_margin="5dp"
+                            android:id="@+id/GridViewRecycler2" />
+                    </LinearLayout>
+                    <ProgressBar
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        style="@style/NewDialog"
+                        android:id="@+id/progress"
+                        android:background="@drawable/custom_progress"
+                        android:layout_marginTop="10dp"
+                        android:visibility="visible"
+                        android:layout_centerInParent="true"/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:textSize="15sp"
+                    android:layout_marginTop="100dp"
+                    android:id="@+id/postText"
+                    android:visibility="gone"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/myProfileRecyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.ShoutLoudVideos">
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        style="@style/NewDialog"
+        android:id="@+id/progress"
+        android:background="@drawable/custom_progress"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white">
+
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:src="@mipmap/log_out"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:visibility="visible"-->
+<!--                android:id="@+id/shoutvideo"/>-->
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/recommendationToolbarLayout"
+                android:visibility="visible">
+                <ImageView
+                    android:id="@+id/imageBackSearch"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_keyboard_arrow_left_black_24dp" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Shoutout Loud"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:text="Personal Video"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recyclerview_personal"/>
+
+                <TextView
+                    android:id="@+id/tv_alert"
+                    android:layout_marginTop="40dp"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Videos Available"/>
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@mipmap/perosnimage"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/recyclerview_fluence"/>
+
+            <TextView
+                android:id="@+id/tv_seeall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See All"
+                android:layout_gravity="right"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:text="Business Adds"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/recycler_view_business"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
